@@ -2,12 +2,6 @@ package vg.civcraft.mc.citadel;
 
 import java.util.concurrent.TimeUnit;
 
-import net.minecraft.util.com.google.common.cache.CacheBuilder;
-import net.minecraft.util.com.google.common.cache.CacheLoader;
-import net.minecraft.util.com.google.common.cache.LoadingCache;
-import net.minecraft.util.com.google.common.cache.RemovalListener;
-import net.minecraft.util.com.google.common.cache.RemovalNotification;
-
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 
@@ -15,6 +9,12 @@ import vg.civcraft.mc.citadel.database.CitadelReinforcementData;
 import vg.civcraft.mc.citadel.misc.CitadelStatics;
 import vg.civcraft.mc.citadel.misc.LoadingCacheNullException;
 import vg.civcraft.mc.citadel.reinforcement.Reinforcement;
+
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
+import com.google.common.cache.RemovalListener;
+import com.google.common.cache.RemovalNotification;
 
 public class ReinforcementManager {
 
