@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 import java.util.logging.Level;
 
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.InventoryHolder;
@@ -95,7 +96,7 @@ public class PlayerReinforcement extends Reinforcement{
 	}
 	
 	public boolean isSecurable() {
-		return (isContainer() || isDoor());
+		return isContainer() || isDoor() || isArmorStand();
 	}
 	
 	public int getDamageMultiplier(){
@@ -180,6 +181,10 @@ public class PlayerReinforcement extends Reinforcement{
     
     public boolean isContainer() {
     	return getLocation().getBlock().getState() instanceof InventoryHolder;
+    }
+    
+    public boolean isArmorStand() {
+    	return getLocation().getBlock().getType() == Material.ARMOR_STAND;
     }
     
     
