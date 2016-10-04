@@ -49,96 +49,6 @@ reinforcements:
 # # Uncomment below to add limits to what blocks this reinforcement can be applied to
 # reinforceables:
 #   - STONE
- bracers:
-  material: NETHER_BRICK_ITEM
-  requirements: 1
-  return: 0
-  percent_chance: 0
-  hit_points: 500
-  mature_time: 129600
-  acid_time: 10080
-  scale_amount: 1
-  lore:
-   - Structure Bracing
-  effect:
-   type: FLYING_GLYPH
-   speed: 0.5
-   particleCount: 50
- basic_tier:
-  material: CLAY_BALL
-  requirements: 1
-  return: 1
-  percent_chance: 100
-  hit_points: 250
-  mature_time: 20
-  acid_time: 120
-  scale_amount: 1
-  lore:
-   - Basic Reinforcement
-  effect:
-   type: FLYING_GLYPH
-   speed: 0.5
-   particleCount: 50
- decent_tier:
-  material: SLIME_BALL
-  requirements: 1
-  return: 1
-  percent_chance: 100
-  hit_points: 750
-  mature_time: 180
-  acid_time: 480
-  scale_amount: 1
-  lore:
-   - Decent Reinforcement
-  effect:
-   type: FLYING_GLYPH
-   speed: 0.5
-   particleCount: 50
- good_tier:
-  material: MAGMA_CREAM
-  requirements: 1
-  return: 1
-  percent_chance: 100
-  hit_points: 1500
-  mature_time: 640
-  acid_time: 1440
-  scale_amount: 1
-  lore:
-   - Good Reinforcement
-  effect:
-   type: FLYING_GLYPH
-   speed: 0.5
-   particleCount: 50
- best_tier:
-  material: QUARTZ
-  requirements: 1
-  return: 1
-  percent_chance: 100
-  hit_points: 2000
-  mature_time: 2560
-  acid_time: 2880
-  scale_amount: 2
-  lore:
-   - Best Reinforcement
-  effect:
-   type: FLYING_GLYPH
-   speed: 0.5
-   particleCount: 50
- good_tier_instant:
-  material: FIREWORK_CHARGE
-  requirements: 1
-  return: 1
-  percent_chance: 95
-  hit_points: 1500
-  mature_time: 5
-  acid_time: 1440
-  scale_amount: 1
-  lore:
-   - Rapid Reinforcement
-  effect:
-   type: FLYING_GLYPH
-   speed: 0.5
-   particleCount: 50
  bedrock:
   material: BEDROCK
   requirements: 1
@@ -186,16 +96,16 @@ non_reinforceables:
 reset_player_state: 300
 enable_maturation: true
 # The max amount of reinforcements to keep loaded
-max_cache_size: 20000
+max_cache_size: 20000000
 # The amount of minutes to keep a reinforcement loaded
 max_cache_load_time: 10
-redstone_distance: 7
+redstone_distance: 3
 acidblock_material: GOLD_BLOCK
 # If set to true then instead of dropping the reinforcement a block with the specified reinforcement value will be dropped.
 drop_reinforced_block: false
-save_interval_ticks: 500
+save_interval_ticks: 600
 # reinforcement_damageMultiplier is m where BlockDamage = 2 ^ (n/m) where n is equal to the number of days the group has been inactive
-reinforcement_damageMultiplier: 7
+reinforcement_damageMultiplier: 365
 mysql:
  hostname: "localhost"
  port: 3306
@@ -203,6 +113,6 @@ mysql:
  username: "bukkit"
  password: ""
 # Shows reinforcement information as percentile value
-show_health_as_percent: false
+show_health_as_percent: true
 # Whether players are automatically put in reinforcement bypass mode on login
-default_bypass_mode: false
+default_bypass_mode: true
